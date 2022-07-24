@@ -21,8 +21,8 @@ def banner(str):
 banner('BUSSID')
 record = [{'Key': {'sourceCity': 'MLG', 'destinationCity': 'SBY', 'routePassed': ['SBY', 'MLG'], 'activityRewards': None}, 'Value': 30}, {'Key': {'sourceCity': 'SBY', 'destinationCity': 'SMG', 'routePassed': ['SMG', 'SBY'], 'activityRewards': None}, 'Value': 60}, {'Key': {'sourceCity': 'MLG', 'destinationCity': 'SMG', 'routePassed': ['SMG', 'MLG'], 'activityRewards': None}, 'Value': 12}, {'Key': {'sourceCity': 'SMG', 'destinationCity': 'CBN', 'routePassed': ['CBN', 'SMG'], 'activityRewards': None}, 'Value': 50}, {'Key': {'sourceCity': 'SBY', 'destinationCity': 'CBN', 'routePassed': ['CBN', 'SBY'], 'activityRewards': None}, 'Value': 10}, {'Key': {'sourceCity': 'MLG', 'destinationCity': 'CBN', 'routePassed': ['CBN', 'MLG'], 'activityRewards': None}, 'Value': 5}, {'Key': {'sourceCity': 'CBN', 'destinationCity': 'JKT', 'routePassed': ['JKT', 'CBN'], 'activityRewards': None}, 'Value': 45}, {'Key': {'sourceCity': 'SMG', 'destinationCity': 'JKT', 'routePassed': ['JKT', 'SMG'], 'activityRewards': None}, 'Value': 9}, {'Key': {'sourceCity': 'SBY', 'destinationCity': 'JKT', 'routePassed': ['JKT', 'SBY'], 'activityRewards': None}, 'Value': 5}, {'Key': {'sourceCity': 'MLG', 'destinationCity': 'JKT', 'routePassed': ['JKT', 'MLG'], 'activityRewards': None}, 'Value': 3}, {'Key': {'sourceCity': 'JKT', 'destinationCity': 'P_Merak', 'routePassed': ['P_Merak', 'JKT'], 'activityRewards': None}, 'Value': 45}]
 auth = input(f'{red}[{white}#{red}] {white}Enter X-Authorization : {bl} ')
-print(f'{red}[{white}#{red}] {white}Note : {red}Gw bukan Pembuat Asli Dari Script ini, GW Cuma Mengubah Sedikit Dari sc ini !! ')
 print(f'{white}<═══════════════════════════{red}[{yellow} • {blue} STARTING {yellow}• {red}]{white}═════════════════════════════>')
+print('')
 headers = {'User-Agent': 'UnityEngine-Unity; Version: 2018.4.26f1','X-ReportErrorAsSuccess': 'true','X-PlayFabSDK': 'UnitySDK-2.20.170411','X-Authorization': '','Content-Type': 'application/json','Content-Length': '157','Host': '4ae9.playfabapi.com'}
 headers['X-Authorization'] = auth
 def create_mission():
@@ -56,7 +56,7 @@ def skip_mission(token):
 			else:
 				logs = backend_data['Logs']
 				msg = logs[len(logs)-1]['Message']
-				print(f'{red}[ {white}{token} {red}] {green}{msg}')
+				print(f'{red}[ {white}{token} {red}] {blue}Get Money As Big As •~> {red}{cash}')
 	
 def pass_mission():
 	carrer = create_mission()
