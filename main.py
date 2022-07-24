@@ -1,4 +1,5 @@
 import requests, json, time, threading, os
+import pyfiglet
 from colorama import Fore, init
 # warna
 red = Fore.LIGHTRED_EX
@@ -10,7 +11,14 @@ bl = Fore.BLACK
 
 init(autoreset=True)
 
-os.system('clear')
+def banner(str):
+    os.system("cls||clear")
+    __banner__ = pyfiglet.figlet_format(str, font="slant", justify="center")
+    print(red + __banner__)
+    print(f'\t\t\t{red}[ {white}Created By Kenzie-XD {red}]')
+    print(f'\t\t{red}[ {white}This tools for auto Money For Bussid {red} ]\n')
+
+banner('BUSSID')
 record = [{'Key': {'sourceCity': 'MLG', 'destinationCity': 'SBY', 'routePassed': ['SBY', 'MLG'], 'activityRewards': None}, 'Value': 30}, {'Key': {'sourceCity': 'SBY', 'destinationCity': 'SMG', 'routePassed': ['SMG', 'SBY'], 'activityRewards': None}, 'Value': 60}, {'Key': {'sourceCity': 'MLG', 'destinationCity': 'SMG', 'routePassed': ['SMG', 'MLG'], 'activityRewards': None}, 'Value': 12}, {'Key': {'sourceCity': 'SMG', 'destinationCity': 'CBN', 'routePassed': ['CBN', 'SMG'], 'activityRewards': None}, 'Value': 50}, {'Key': {'sourceCity': 'SBY', 'destinationCity': 'CBN', 'routePassed': ['CBN', 'SBY'], 'activityRewards': None}, 'Value': 10}, {'Key': {'sourceCity': 'MLG', 'destinationCity': 'CBN', 'routePassed': ['CBN', 'MLG'], 'activityRewards': None}, 'Value': 5}, {'Key': {'sourceCity': 'CBN', 'destinationCity': 'JKT', 'routePassed': ['JKT', 'CBN'], 'activityRewards': None}, 'Value': 45}, {'Key': {'sourceCity': 'SMG', 'destinationCity': 'JKT', 'routePassed': ['JKT', 'SMG'], 'activityRewards': None}, 'Value': 9}, {'Key': {'sourceCity': 'SBY', 'destinationCity': 'JKT', 'routePassed': ['JKT', 'SBY'], 'activityRewards': None}, 'Value': 5}, {'Key': {'sourceCity': 'MLG', 'destinationCity': 'JKT', 'routePassed': ['JKT', 'MLG'], 'activityRewards': None}, 'Value': 3}, {'Key': {'sourceCity': 'JKT', 'destinationCity': 'P_Merak', 'routePassed': ['P_Merak', 'JKT'], 'activityRewards': None}, 'Value': 45}]
 auth = input(f'{red}[{white}#{red}] {white}Enter X-Authorization : {yellow} ')
 print(f'{white}<══════════════════════════{red}[{yellow} • {green} STARTING {yellow}• {red}]{white}════════════════════════════>')
