@@ -39,7 +39,7 @@ def create_mission():
 				carrer = data['FunctionResult']['careerSession']
 				return carrer
 	else:
-		continue 
+		return None
 
 def skip_mission(token):
 	data = json.dumps({"FunctionName":"FarePayment","FunctionParameter":{"records":record,"bonus":True,"careerToken":token,"activityRewardToken":"{\"rewards\":[]}"},"RevisionSelection":"Live","SpecificRevision":None,"GeneratePlayStreamEvent":False})
