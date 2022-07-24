@@ -24,8 +24,6 @@ auth = input(f'{red}[{white}#{red}] {white}Enter X-Authorization : {bl} ')
 print(f'{white}<═══════════════════════════{red}[{yellow} • {green} STARTING {yellow}• {red}]{white}═════════════════════════════>')
 headers = {'User-Agent': 'UnityEngine-Unity; Version: 2018.4.26f1','X-ReportErrorAsSuccess': 'true','X-PlayFabSDK': 'UnitySDK-2.20.170411','X-Authorization': '','Content-Type': 'application/json','Content-Length': '157','Host': '4ae9.playfabapi.com'}
 headers['X-Authorization'] = auth
-while True:
-
 def create_mission():
 	game_data = '{"FunctionName":"PlayCareer","FunctionParameter":{"cities":["MLG","SBY","SMG","CBN","JKT","P_Merak","P_Bakauheni","LPG","PLB","JMB","PBR"]},"RevisionSelection":"Live","SpecificRevision":null,"GeneratePlayStreamEvent":false}'
 	response = requests.post('https://4ae9.playfabapi.com/Client/ExecuteCloudScript', headers=headers, data=game_data).text
@@ -66,5 +64,5 @@ def pass_mission():
 		skip_mission(token)
 
 
-if __name__=="__main__":
-      pass_mission()
+while True:
+        pass_mission()
