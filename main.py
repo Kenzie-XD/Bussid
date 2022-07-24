@@ -42,6 +42,7 @@ def create_mission():
 		continue 
 
 def skip_mission(token):
+    while True:
 	data = json.dumps({"FunctionName":"FarePayment","FunctionParameter":{"records":record,"bonus":True,"careerToken":token,"activityRewardToken":"{\"rewards\":[]}"},"RevisionSelection":"Live","SpecificRevision":None,"GeneratePlayStreamEvent":False})
 	response = requests.post('https://4ae9.playfabapi.com/Client/ExecuteCloudScript', headers=headers, data=data).text
 	if response != '':
@@ -63,7 +64,6 @@ def pass_mission():
 		token = carrer['token']
 		skip_mission(token)
 
-while True:
 
 if __name__=="__main__":
       pass_mission()
