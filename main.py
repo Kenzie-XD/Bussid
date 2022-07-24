@@ -55,7 +55,7 @@ def skip_mission(token):
 			else:
 				logs = backend_data['Logs']
 				msg = logs[len(logs)-1]['Message']
-				print(f'{red}[ {white}{token} {red}] {yellow}{msg}')
+				print(f'{red}[ {white}{token} {red}] {green}{msg}')
 	
 def pass_mission():
 	carrer = create_mission()
