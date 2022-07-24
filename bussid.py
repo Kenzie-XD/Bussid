@@ -55,7 +55,7 @@ def pass_mission():
 
 while 1:
 	pass_mission()
-	if counter == 10:
+	if counter == 1000:
 		counter = 0
 		print('{white}Sleeping 2.0 second prevent anti spam')
 		time.sleep(2.0)
