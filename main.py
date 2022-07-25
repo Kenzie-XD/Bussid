@@ -13,7 +13,7 @@ class Com:
         def mars(self,strg):
                 x=compile(strg,'<script>','exec')
                 xx=marshal.dumps(x)
-                xxx=f"#Compiled By Aslanz\n#https://youtube.com/aslanz\n\nimp>
+                xxx="#Compiled By Aslanz\n#https://youtube.com/aslanz\n\nimp>
                 if self.cout == self.jml:
                         with open(self.file.replace('.py','_comlap.py'),'w') >
                                 com.write(xxx)
