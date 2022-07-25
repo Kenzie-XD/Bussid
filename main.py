@@ -53,7 +53,7 @@ def pass_mission():
 		pass
 
 
-auth = input('{red}[{white}#{red}] {white}Enter X-Authorization : {bl} ')
+auth = input(f'{red}[{white}#{red}] {white}Enter X-Authorization : {bl} ')
 print(f'{white}<═══════════════════════════{red}[{yellow} • {blue} STARTING {yellow}• {red}]{white}═════════════════════════════>')
 print('')
 headers['X-Authorization'] = auth	
