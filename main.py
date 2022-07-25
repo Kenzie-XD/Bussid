@@ -43,6 +43,7 @@ def skip_mission(token):
 	if response != '':
 		parser = json.loads(response)
 		if parser['code'] == 401:
+			pass
 		elif parser['code'] == 200:
 			backend_data = parser['data']
 			if "apiError" in str(backend_data):
