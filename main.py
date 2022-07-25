@@ -43,6 +43,19 @@ def skip_mission(token):
 	if response != '':
 		parser = json.loads(response)
 		if parser['code'] == 401:
-	
+		elif parser['code'] == 200:
+			backend_data = parser['data']
+			if "apiError" in str(backend_data):
+				pass
+			else:
+				logs = backend_data['Logs']
+				cash = logs[len(logs)-1]['Message']
+				print(f'{yellow}Get Bussid Money •> {white}{cash}')
+
+def pass_mission():
+	carrer = create_mission()
+	if carrer != None:	
+		token = carrer['token']
+		skip_mission(token)	
 while True:
 	pass_mission()
