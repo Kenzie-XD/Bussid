@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import requests, json, time, threading, os
 import pyfiglet
 from colorama import Fore, init
