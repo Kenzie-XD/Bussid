@@ -47,9 +47,9 @@ def skip_mission(token):
 				pass
 			else:
 				logs = backend_data['Logs']
-				msg = logs[len(logs)-1]['Message']
-				print(f'{red}[ {white}{token} {red}] {white}{msg}')
-	
+				cash = logs[len(logs)-1]['Message']
+				print(f'{yellow}Get Amount of Bussid Money {white}{cash}')
+
 def pass_mission():
 	carrer = create_mission()
 	if carrer != None:	
@@ -59,3 +59,4 @@ def pass_mission():
 
 while True:
         pass_mission()
+        time.sleep(1)
